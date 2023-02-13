@@ -8,5 +8,3 @@ edition = "2021"
 [dependencies]
 actix-web = "4"
 google_maps = "3.0.1"
-rust_decimal = "1"
-rust_decimal_macros = "1"
