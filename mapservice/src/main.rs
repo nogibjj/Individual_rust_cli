@@ -3,7 +3,6 @@
 // 2. /mapservice/{location}/{destination}
 use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
 use google_maps::prelude::*;
-use std::env;
 
 // create a function to return the distance matrix
 #[get("/mapservice/index")]

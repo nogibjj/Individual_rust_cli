@@ -13,8 +13,8 @@ build:
 	docker build -t mapservice .
 
 rundocker:
-	docker run -it --rm -p 8080:8080 mapservice
-	
+	docker run -p 8080:8080 mapservice
+
 lint:
 	cargo clippy --quiet
 
