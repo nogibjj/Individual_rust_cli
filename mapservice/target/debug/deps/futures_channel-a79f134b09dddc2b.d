@@ -1,0 +1,10 @@
+/Users/yuxinsong/IDS721/Individual_rust_microservice/mapservice/target/debug/deps/futures_channel-a79f134b09dddc2b.rmeta: /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lib.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lock.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/mod.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/queue.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/sink_impl.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/oneshot.rs
+
+/Users/yuxinsong/IDS721/Individual_rust_microservice/mapservice/target/debug/deps/futures_channel-a79f134b09dddc2b.d: /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lib.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lock.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/mod.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/queue.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/sink_impl.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/oneshot.rs
+
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lib.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/lock.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/mod.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/queue.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/mpsc/sink_impl.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.26/src/oneshot.rs:
