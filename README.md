@@ -1,4 +1,4 @@
-# rust-new-project-template
+# Mapservice based on Rust
 ## Introduction
 This is a course project from IDS721 cloud computing. This project aims to develop a useful command-line tool for data engineers based on Rust. Specifically, user can just type into two location names and get useful information like Lat and Lng, travel time, etc.
 
