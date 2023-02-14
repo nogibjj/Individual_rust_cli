@@ -1,20 +1,15 @@
 # rust-new-project-template
 ## Introduction
-This is a course project from IDS721 cloud computing. This project aims to develop a useful microservice for data engineers based on Rust. In addition, this project will be deployed on AWS. Specifically, user can just type into two location names and get useful information like Lat and Lng, travel time, etc.
+This is a course project from IDS721 cloud computing. This project aims to develop a useful command-line tool for data engineers based on Rust. Specifically, user can just type into two location names and get useful information like Lat and Lng, travel time, etc.
 
 ## Usage
 For local testing, user must use their own GogleMap API Key to succesful access the information. Or user can use the link to use the mapservice.
 
 For local testing, cd to the mapservice folder and type in:
 ```
-cargo run
+cargo run -- mapservice --function {locations, time, distance} --location1 [LOCATION_NAME] --location2 [LOCATION_NAME]
 ```
 
-For docker, type in:
-```
-make build
-make rundocker
-```
 ## Project Screenshots
 For distance:
 ![alt text](src/sh1.png)
@@ -26,10 +21,9 @@ For Lat and Lng:
 ### Week One:
 Start Projects and finish the basic functions.
 ### Week Two:
-Finish the basic functions and test it with docker.
+Finish the basic functions and test it.
 ### Week Three:
-Fix bugs and depoly on AWS and test it.
-
+Fix bug and add more features.
 
 ## References
 * [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
