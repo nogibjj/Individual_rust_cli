@@ -5,9 +5,9 @@ use google_maps::prelude::*;
 //add extended help
 #[clap(
     version = "4.0.32",
-    author = "Bryce Whitney",
-    about = "A command-line tool that looks at programming language trends around the country",
-    after_help = "Example: cargo run OR cargo run -- single --langauge Rust"
+    author = "Yuxin Song",
+    about = "A command line tool for map service.",
+    after_help = "Example: cargo run --bin mapservice -- mapservice --function distance --location1 Durham --location2 RDU"
 )]
 struct Args {
     #[clap(subcommand)]
@@ -17,7 +17,7 @@ struct Args {
 #[derive(Parser)]
 enum Commands {
     #[clap(
-        about = "Choose a single language to see the full results for. Options are Rust, Python, C, Java, and Javascript"
+        about = "Choose a function to use.",
     )]
     Mapservice {
         #[clap(short, long)]
