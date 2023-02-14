@@ -29,7 +29,7 @@ enum Commands {
     },
 }
 async fn distance(start_location: &str, end_location: &str) {
-    let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
+    let google_maps_client = GoogleMapsClient::new("YOUR API KEY");
 
     let directions = google_maps_client
         .directions(
@@ -48,7 +48,7 @@ async fn distance(start_location: &str, end_location: &str) {
 
 // create a function to return the distance matrix
 async fn locations(start_location: &str, end_location: &str) {
-    let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
+    let google_maps_client = GoogleMapsClient::new("YOUR API KEY");
 
     let directions = google_maps_client
         .directions(
@@ -105,7 +105,7 @@ async fn locations(start_location: &str, end_location: &str) {
 }
 
 async fn time(start_location: &str, end_location: &str) {
-    let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
+    let google_maps_client = GoogleMapsClient::new("YOUR API KEY");
 
     let directions = google_maps_client
         .directions(
