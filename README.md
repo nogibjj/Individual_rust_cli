@@ -12,11 +12,11 @@ cargo run -- mapservice --function {locations, time, distance} --location1 [LOCA
 
 ## Project Screenshots
 For distance:
-![alt text](src/sh1.png)
+![alt text](src/sh5.png)
 For time:
-![alt text](src/sh2.png)
+![alt text](src/sh6.png)
 For Lat and Lng:
-![alt text](src/sh3.png)
+![alt text](src/sh7.png)
 ## Project plan
 ### Week One:
 Start Projects and finish the basic functions.
