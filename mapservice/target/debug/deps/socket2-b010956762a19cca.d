@@ -1,0 +1,11 @@
+/Users/yuxinsong/IDS721/Individual_rust_microservice/mapservice/target/debug/deps/socket2-b010956762a19cca.rmeta: /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/lib.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockaddr.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/socket.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockref.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sys/unix.rs
+
+/Users/yuxinsong/IDS721/Individual_rust_microservice/mapservice/target/debug/deps/libsocket2-b010956762a19cca.rlib: /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/lib.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockaddr.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/socket.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockref.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sys/unix.rs
+
+/Users/yuxinsong/IDS721/Individual_rust_microservice/mapservice/target/debug/deps/socket2-b010956762a19cca.d: /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/lib.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockaddr.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/socket.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockref.rs /Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sys/unix.rs
+
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/lib.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockaddr.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/socket.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sockref.rs:
+/Users/yuxinsong/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.7/src/sys/unix.rs:

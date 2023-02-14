@@ -1,49 +1,61 @@
-// An actix Microservice that has two routes:
-// 1. /mapservice/index
-// 2. /mapservice/{location}/{destination}
-use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
+use clap::Parser;
 use google_maps::prelude::*;
 
-// create a function to return the distance matrix
-#[get("/mapservice/index")]
-async fn index() -> impl Responder {
-    HttpResponse::Ok().body("Welcome to the mapservice!")
+#[derive(Parser)]
+//add extended help
+#[clap(
+    version = "4.0.32",
+    author = "Bryce Whitney",
+    about = "A command-line tool that looks at programming language trends around the country",
+    after_help = "Example: cargo run OR cargo run -- single --langauge Rust"
+)]
+struct Args {
+    #[clap(subcommand)]
+    command: Option<Commands>,
 }
 
-// create a function to return the distance matrix
-#[get("/mapservice/distance/{location}/{destination}")]
-async fn distance(path: web::Path<(String, String)>) -> impl Responder {
+#[derive(Parser)]
+enum Commands {
+    #[clap(
+        about = "Choose a single language to see the full results for. Options are Rust, Python, C, Java, and Javascript"
+    )]
+    Mapservice {
+        #[clap(short, long)]
+        function: Option<String>, // Determine what language to look at
+        #[clap(long, default_value = "Durham")]
+        location1: Option<String>,
+        #[clap(long, default_value = "RDU")]
+        location2: Option<String>,
+    },
+}
+async fn distance(start_location: &str, end_location: &str) {
     let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
-    let (location, destination) = path.into_inner();
 
     let directions = google_maps_client
         .directions(
             // Origin: Canadian Museum of Nature
-            Location::Address(String::from(location)),
+            Location::Address(String::from(start_location)),
             // Destination: Canada Science and Technology Museum
-            Location::Address(String::from(destination)),
+            Location::Address(String::from(end_location)),
             // Location::LatLng(LatLng::try_from_f64(45.403_509, -75.618_904)),
         )
         .with_travel_mode(TravelMode::Driving)
         .execute()
         .await;
     let distance = directions.unwrap().routes[0].legs[0].distance.text.clone();
-    // make response with a body containing the distance
-    HttpResponse::Ok().body(distance)
+    print!("{}", distance);
 }
 
 // create a function to return the distance matrix
-#[get("/mapservice/locations/{location}/{destination}")]
-async fn locations(path: web::Path<(String, String)>) -> impl Responder {
+async fn locations(start_location: &str, end_location: &str) {
     let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
-    let (location, destination) = path.into_inner();
 
     let directions = google_maps_client
         .directions(
             // Origin: Canadian Museum of Nature
-            Location::Address(String::from(location)),
+            Location::Address(String::from(start_location)),
             // Destination: Canada Science and Technology Museum
-            Location::Address(String::from(destination)),
+            Location::Address(String::from(end_location)),
             // Location::LatLng(LatLng::try_from_f64(45.403_509, -75.618_904)),
         )
         .with_travel_mode(TravelMode::Driving)
@@ -89,20 +101,18 @@ async fn locations(path: web::Path<(String, String)>) -> impl Responder {
     str_start_location.push_str(str3_start);
     str_start_location.push_str(str2_start);
     str.push_str(&str_start_location);
-    HttpResponse::Ok().body(str)
+    print!("{}", str);
 }
 
-#[get("/mapservice/time/{location}/{destination}")]
-async fn time(path: web::Path<(String, String)>) -> impl Responder {
+async fn time(start_location: &str, end_location: &str) {
     let google_maps_client = GoogleMapsClient::new("AIzaSyCo8jSvSmDtiQ1r2zAMSFdYVQs9IoahERw");
-    let (location, destination) = path.into_inner();
 
     let directions = google_maps_client
         .directions(
             // Origin: Canadian Museum of Nature
-            Location::Address(String::from(location)),
+            Location::Address(String::from(start_location)),
             // Destination: Canada Science and Technology Museum
-            Location::Address(String::from(destination)),
+            Location::Address(String::from(end_location)),
             // Location::LatLng(LatLng::try_from_f64(45.403_509, -75.618_904)),
         )
         .with_travel_mode(TravelMode::Driving)
@@ -110,19 +120,31 @@ async fn time(path: web::Path<(String, String)>) -> impl Responder {
         .await;
     let duration = directions.unwrap().routes[0].legs[0].duration.text.clone();
     // make response with a body containing the distance
-    HttpResponse::Ok().body(duration)
+    print!("{}", duration);
 }
 
-#[actix_web::main]
+#[tokio::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
-        App::new()
-            .service(index)
-            .service(distance)
-            .service(locations)
-            .service(time)
-    })
-    .bind("0.0.0.0:8080")?
-    .run()
-    .await
+    let args = Args::parse();
+    match args.command {
+        Some(Commands::Mapservice { function,location1,location2 }) => 
+        match function.unwrap().as_str() {
+            "distance" => {
+                distance(location1.as_ref().unwrap().as_str(),location2.as_ref().unwrap().as_str()).await;
+            }
+            "time" => {
+                time(location1.as_ref().unwrap().as_str(),location2.as_ref().unwrap().as_str()).await;
+            }
+            "locations" => {
+                locations(location1.as_ref().unwrap().as_str(),location2.as_ref().unwrap().as_str()).await;
+            }
+            &_ => {
+                print!("hello");
+            }
+        },
+        _ => {
+            print!("hello, world");
+        }
+    }
+    Ok(())
 }
